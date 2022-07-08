@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./Css/nav.css">
+  <link rel="stylesheet" href="./Css/logo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elective Allocation System</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-identity">
+      <h1><a href="index.html">Gui-Web Tool For Elective Registration</a></h1>
+    </div>
+    <nav class="site-navigation">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <img src="./img/uoh_logo.png" alt="University of Hyderabad" class="center">
+
+  <br>
+  <div class="box text-center">
+
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card border-success mb-3">
+        <div class="card-header">Upload File</div>
+        <div class="card-body text-center">
+          <div class="row">
+            <div class="col">
+              <div class="text-left text-strong"><strong>Upload stream Details :</strong> &nbsp; <input type="file"
+                  name="file" id="UploadStreamDetails" accept=".csv" />
+                  <input type="submit" id="upbtn1" class="btn btn-primary"
+                  onclick="displayHTMLTable()" value="Upload File"/>
+              </div>
+
+              <br>
+              <div class="text-left text-strong"><strong>Upload Elective Details : </strong> &nbsp; <input type="file"
+                name="file" id="electiveDetails" accept=".csv" />
+                <input type="submit" id="upbtn2" class="btn btn-primary"
+                onclick="printDetails()" value="Upload File"/>
+            </div>
+            </div>
+
+          </div>
+
+          <br><br>
+          <div class="t1" id="parsed_csv_list" style="overflow-x:auto;">
+            
+          </div>
+          <div class="col">
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"
+		integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/streamDetails.js"></script>
+  <script src="js/main.js"></script>
+  <script src="./js/electiveDetails.js"></script>
+  <script src="./js/table.js"></script>
+
+
+</body>
+
+</html>
